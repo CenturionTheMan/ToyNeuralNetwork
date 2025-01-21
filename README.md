@@ -183,15 +183,11 @@ The network can also be trained using the `Trainer` class. This class allows sav
 ```csharp
 (Matrix[], Matrix)[] testData = [([new Matrix(28, 28)], new Matrix(9, 1))];
 
-var trainer =
-    new Trainer(neuralNetwork: nn, data: data, initialLearningRate: 0.01f,
-    minLearningRate: 0.001f, epochAmount: 30, batchSize: 50);
+var trainer = new Trainer(neuralNetwork: nn, data: data, initialLearningRate: 0.01f, minLearningRate: 0.001f, epochAmount: 30, batchSize: 50);
 
-(Task task, CancellationTokenSource cts) =
-    trainer.SetPatience(initialIgnore: 0.5f, patience: 0.3f,
-        learningRateModifier: (lr, epoch) => lr - 0.001f)
-    .SetLogSaving(outputDirPath: "dirPath", saveNN: true, testData: testData, out string trainingLogDirectory)
-    .RunTrainingOnTask();
+(Task task, CancellationTokenSource cts) = trainer.SetPatience(initialIgnore: 0.5f, patience: 0.3f, learningRateModifier: (lr, epoch) => lr - 0.001f)
+                                                  .SetLogSaving(outputDirPath: "dirPath", saveNN: true, testData: testData, out string trainingLogDirectory)
+                                                  .RunTrainingOnTask();
 ```
 
 When creating a `Trainer` object, the minimum value for the learning rate parameter must be provided separately. If the network reaches this value during training, the training will terminate prematurely - at the end of the current epoch. The `SetPatience` method specifies that this functionality should be included during training. The `initialIgnore` parameter delays the start of this functionality. For the value used in the example, the verification of the decline in the average error will start halfway through the first epoch. The `patience` variable defines how many (and which) batches will be checked to determine whether the network is making progress. For a value of 0.3, the regression line will be calculated for (approximately) 1/3 of the batches in an epoch.
