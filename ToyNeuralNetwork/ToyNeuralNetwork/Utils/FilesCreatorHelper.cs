@@ -8,7 +8,7 @@ using System.Xml;
 using System.Xml.Linq;
 
 
-namespace NeuralNetworkLibrary.Utils;
+namespace ToyNeuralNetwork.Utils;
 
 public static class FilesCreatorHelper
 {

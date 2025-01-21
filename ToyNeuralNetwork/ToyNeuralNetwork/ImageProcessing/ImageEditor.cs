@@ -1,8 +1,8 @@
-﻿using NeuralNetworkLibrary.Math;
+﻿using ToyNeuralNetwork.Math;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 
-namespace NeuralNetworkLibrary.ImageProcessing;
+namespace ToyNeuralNetwork.ImageProcessing;
 
 public static class ImageEditor
 {

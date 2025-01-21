@@ -1,9 +1,9 @@
-﻿using NeuralNetworkLibrary.ImageProcessing;
-using NeuralNetworkLibrary.Math;
+﻿using ToyNeuralNetwork.ImageProcessing;
+using ToyNeuralNetwork.Math;
 using NumSharp;
 using System.Diagnostics;
 
-namespace NeuralNetworkLibrary.QuickDrawHandler;
+namespace ToyNeuralNetwork.QuickDrawHandler;
 
 public static class QuickDrawDataReader
 {

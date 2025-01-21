@@ -1,6 +1,6 @@
-﻿using NeuralNetworkLibrary.Utils;
+﻿using ToyNeuralNetwork.Utils;
 
-namespace NeuralNetworkLibrary.Math;
+namespace ToyNeuralNetwork.Math;
 
 public static class ActivationFunctionsHandler
 {

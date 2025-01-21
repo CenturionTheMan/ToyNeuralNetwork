@@ -1,6 +1,6 @@
-﻿using NeuralNetworkLibrary.Math;
+﻿using ToyNeuralNetwork.Math;
 
-namespace NeuralNetworkLibrary.QuickDrawHandler;
+namespace ToyNeuralNetwork.QuickDrawHandler;
 
 public struct QuickDrawSample
 {

@@ -1,8 +1,8 @@
-using NeuralNetworkLibrary.Math;
-using NeuralNetworkLibrary.Utils;
+using ToyNeuralNetwork.Math;
+using ToyNeuralNetwork.Utils;
 using System.Diagnostics;
 
-namespace NeuralNetworkLibrary.NeuralNetwork;
+namespace ToyNeuralNetwork.NeuralNetwork;
 
 public class Trainer
 {

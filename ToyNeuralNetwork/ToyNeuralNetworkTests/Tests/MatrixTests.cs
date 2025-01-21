@@ -1,4 +1,4 @@
-using NeuralNetworkLibrary.Math;
+using ToyNeuralNetwork.Math;
 
 namespace NeuralNetworkUnitTest.Math;
 

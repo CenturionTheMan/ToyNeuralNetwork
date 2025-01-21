@@ -1,10 +1,10 @@
-﻿using NeuralNetworkLibrary.Math;
-using NeuralNetworkLibrary.Utils;
+﻿using ToyNeuralNetwork.Math;
+using ToyNeuralNetwork.Utils;
 using System.Xml.Linq;
 
-using static NeuralNetworkLibrary.ImageProcessing.ImageEditor;
+using static ToyNeuralNetwork.ImageProcessing.ImageEditor;
 
-namespace NeuralNetworkLibrary.NeuralNetwork;
+namespace ToyNeuralNetwork.NeuralNetwork;
 
 public class NeuralNetwork
 {

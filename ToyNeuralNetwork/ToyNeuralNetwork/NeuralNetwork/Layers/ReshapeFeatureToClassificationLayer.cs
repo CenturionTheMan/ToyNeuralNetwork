@@ -1,9 +1,9 @@
-using NeuralNetworkLibrary.Math;
-using NeuralNetworkLibrary.Utils;
+using ToyNeuralNetwork.Math;
+using ToyNeuralNetwork.Utils;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace NeuralNetworkLibrary.NeuralNetwork;
+namespace ToyNeuralNetwork.NeuralNetwork;
 
 internal class ReshapeFeatureToClassificationLayer : ILayer
 {

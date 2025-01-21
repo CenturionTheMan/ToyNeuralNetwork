@@ -1,6 +1,6 @@
-using NeuralNetworkLibrary.Utils;
+using ToyNeuralNetwork.Utils;
 
-namespace NeuralNetworkLibrary.NeuralNetwork;
+namespace ToyNeuralNetwork.NeuralNetwork;
 
 public class LayerTemplate
 {   

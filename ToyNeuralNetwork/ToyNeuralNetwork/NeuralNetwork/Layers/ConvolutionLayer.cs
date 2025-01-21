@@ -1,5 +1,5 @@
-﻿using NeuralNetworkLibrary.Math;
-using NeuralNetworkLibrary.Utils;
+﻿using ToyNeuralNetwork.Math;
+using ToyNeuralNetwork.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace NeuralNetworkLibrary.NeuralNetwork;
+namespace ToyNeuralNetwork.NeuralNetwork;
 
 internal class ConvolutionLayer : ILayer
 {

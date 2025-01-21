@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NeuralNetworkLibrary.Utils;
+namespace ToyNeuralNetwork.Utils;
 
 public enum ActivationFunction
 {
