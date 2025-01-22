@@ -43,7 +43,7 @@ The network error is calculated using the cross-entropy cost function.
 
 # Library structure
 
-![](README_IMG/lib_all_diagram.png?raw=true)
+![](.github/README_IMG/lib_all_diagram.png?raw=true)
 
 In Figure, it can be observed that the system of dependencies and relationships within the library is relatively complex. However, the classes it contains can be divided into five modules:
 
@@ -55,7 +55,7 @@ In Figure, it can be observed that the system of dependencies and relationships 
 
 ## Mathematical Module
 
-![](README_IMG/math.png?raw=true)
+![](.github/README_IMG/math.png?raw=true)
 
 The **Mathematical Module** is the core of the entire library. It implements a matrix class along with a set of mathematical operations that can be performed on matrices.
 
@@ -81,7 +81,7 @@ The final class is `MatrixHelper`, which contains methods for calculating corres
 
 ## Image Processing Module
 
-![](README_IMG/imageProcessing.png?raw=true)
+![](.github/README_IMG/imageProcessing.png?raw=true)
 
 The **Image Processing Module** consists of only one class: `ImageEditor`. In this case, the matrix represents a single channel of an image, and the available set of functions is used for editing it. The implemented methods are used in the library to modify the input data to better crop the samples and introduce noise in the form of randomly modified rotations and sizes.
 
@@ -89,7 +89,7 @@ Additionally, the library allows for loading an image into a matrix and saving t
 
 ## Utils Module
 
-![](README_IMG/utils.png?raw=true)
+![](.github/README_IMG/utils.png?raw=true)
 
 The **Utils Module** contains declarations of enumerations and tools for basic file management.
 
@@ -99,7 +99,7 @@ Additionally, support for XML and CSV files has been implemented. XML files are 
 
 ## "Quick, Draw!" Data Handling Module
 
-![](README_IMG/quickDrawHandler.png?raw=true)
+![](.github/README_IMG/quickDrawHandler.png?raw=true)
 
 The **"Quick, Draw!" Data Handling Module** contains classes responsible for transforming the available data from the "Quick Draw" dataset in .npy format to the format used by the library.
 
@@ -114,7 +114,7 @@ Additionally, for the nine classes implemented in the presentation layer, `Quick
 
 ## Neural Networks Module
 
-![](README_IMG/neuralNetwork.png?raw=true)
+![](.github/README_IMG/neuralNetwork.png?raw=true)
 
 Finally, the most complex of the modules, the **Neural Networks Module**. Within it, we can distinguish one subgroup: **Layers**. This contains all the layers available to the user. These layers implement the `ILayer` interface, which declares methods for forwarding and backwarding data during the training process, as well as methods for saving the layer to an XML file.
 
