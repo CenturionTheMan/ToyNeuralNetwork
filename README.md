@@ -1,3 +1,5 @@
+[![NuGet](https://img.shields.io/nuget/v/ToyNeuralNetwork.svg)](https://www.nuget.org/packages/ToyNeuralNetwork/#readme-body-tab)
+
 # Introduction
 
 The main motivation for the project was to create a library that enables interaction with neural networks through a high-level interface. The aim was to provide the user with a set of specific classes and methods that manage the library's lower-level relationships in an accessible manner.
