@@ -11,6 +11,7 @@
     <Description>A self-made neural network library that supports feedforward neural networks and convolutional neural networks</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/CenturionTheMan/ToyNeuralNetwork</RepositoryUrl>
+    <PackageReadmeFile>./../../README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
