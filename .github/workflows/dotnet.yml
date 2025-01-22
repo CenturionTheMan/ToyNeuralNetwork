@@ -46,7 +46,7 @@ jobs:
         run: dotnet build ToyNeuralNetwork/ToyNeuralNetwork.sln --no-restore --configuration Release
 
       - name: Pack NuGet package
-        run: dotnet pack ToyNeuralNetwork/ToyNeuralNetwork.csproj --no-build --configuration Release -o ./artifacts
+        run: dotnet pack ToyNeuralNetwork/ToyNeuralNetwork/ToyNeuralNetwork.csproj --no-build --configuration Release -o ./artifacts
 
       - name: Publish NuGet package
         env:
