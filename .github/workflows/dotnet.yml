@@ -3,6 +3,8 @@ name: .NET
 on:
   push:
     branches: ["main"]
+    tags:
+      - "v*" # Add this to trigger on version tags
   pull_request:
     branches: ["main"]
 
@@ -11,13 +13,42 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build and Test .NET
+
+      - name: Setup .NET
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 8.0.x
+
       - name: Restore dependencies for solution
         run: dotnet restore ToyNeuralNetwork/ToyNeuralNetwork.sln
+
       - name: Build solution
         run: dotnet build ToyNeuralNetwork/ToyNeuralNetwork.sln --no-restore
+
       - name: Test solution
         run: dotnet test ToyNeuralNetwork/ToyNeuralNetwork.sln --no-build --verbosity normal
+
+  publish:
+    runs-on: windows-latest
+    if: startsWith(github.ref, 'refs/tags/v')
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore dependencies for solution
+        run: dotnet restore ToyNeuralNetwork/ToyNeuralNetwork.sln
+
+      - name: Build solution
+        run: dotnet build ToyNeuralNetwork/ToyNeuralNetwork.sln --no-restore --configuration Release
+
+      - name: Pack NuGet package
+        run: dotnet pack ToyNeuralNetwork/ToyNeuralNetwork.csproj --no-build --configuration Release -o ./artifacts
+
+      - name: Publish NuGet package
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+        run: dotnet nuget push ./artifacts/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
