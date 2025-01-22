@@ -11,12 +11,13 @@
     <Description>A self-made neural network library that supports feedforward neural networks and convolutional neural networks</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/CenturionTheMan/ToyNeuralNetwork</RepositoryUrl>
-    <PackageReadmeFile>./../../README.md</PackageReadmeFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="NumSharp" Version="0.30.0" />
     <PackageReference Include="SixLabors.ImageSharp" Version="3.1.5" />
+    <None Include="./../../README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
